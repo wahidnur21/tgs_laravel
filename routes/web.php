@@ -21,9 +21,13 @@ Route::get('/about', [HomeController ::class, 'about']);
 
 Route::get('/add', [HomeController ::class, 'tambah']);
 
-Route::get('/save', [HomeController ::class, 'simpan']);
+Route::post('/save', [HomeController ::class, 'simpan']);
 
-Route::get('/test', [HomeController ::class, 'test']);
+Route::get('/makanan', [HomeController ::class, 'view_makanan']);
+
+
+Route::get('/test_builder', [HomeController ::class, 'test_builder']);
+Route::get('/test_eloquent', [HomeController ::class, 'test_eloquent']);
 
 
 
