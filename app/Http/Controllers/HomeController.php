@@ -55,7 +55,7 @@ class HomeController extends Controller
         }
     
 
-    public function test()
+    public function test_builder()
        {
          //query Builder inset 1 data
         // DB ::table('makanans')->insert([
@@ -93,13 +93,50 @@ class HomeController extends Controller
     //     DB::table('makanans')->where('id', 1)->delete();
 
     // Query untk Update data
-    DB::table('makanans')->where('kode_makanan', 1)->update([
-        'nama'=> 'onde-onde',
-        'kategori'=> 'onde-onde',
-        'harga'=> 'onde-onde',
-        'ket'=> 'onde-onde',
-    ]);
+    // DB::table('makanans')->where('kode_makanan', 1)->update([
+    //     'nama'=> 'onde-onde',
+    //     'kategori'=> 'jajan',
+    //     'harga'=> '10000',
+    //     'ket'=> '',
+   // ]);
     
         return 'masuk ke test';
     }
+
+    public function test_eloquent()
+       {
+        //SELEC DATA
+        // $makanans = Makanan::all();
+        // dd($makanans);
+        // INSERT DATA 2
+        $makanan = new Makanan;
+        $makanan->kode_makanan = 'm100';
+        $makanan->nama ='Kuaci';
+        $makanan->kategori = 'makanan';
+        $makanan->harga =10000;
+        $makanan->ket = 'tersedia';
+        $makanan->save();
+
+        //Hapus data cara 1
+        //Makanan::find('m001')->delete();
+
+        //Hapus cara 2
+        //$makanan = Makanan::find('m001');
+        //$makanan->delete();
+
+        //UPDATE DATA
+        //$makanan = Makanan::find('m001');
+        //$makanan->nama ='Telor asin';
+        //$makanan->kategori = 'snak';
+        //$makanan->harga =5000;
+        //$makanan->ket = 'tersedia';
+        //$makanan->save();
+
+        return 'masuk ke test';
+    }
 }
+        
+    
+
+       
+

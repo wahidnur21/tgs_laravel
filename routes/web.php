@@ -27,7 +27,7 @@ Route::get('/makanan', [HomeController ::class, 'view_makanan']);
 
 
 Route::get('/test_builder', [HomeController ::class, 'test_builder']);
-Route::get('/test_eloquent', [HomeController ::class, 'test_eloquent']);
+Route::get('/eloquent', [HomeController ::class, 'test_eloquent']);
 
 
 
