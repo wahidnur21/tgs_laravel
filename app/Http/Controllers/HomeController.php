@@ -65,26 +65,29 @@ class HomeController extends Controller
         //     'ket' => 'Murahan',           
         //  ]);
     //     //query Builder ubtuk insert banyak data
-    //     DB::table('makanans')->insert([
-    //         [
-    //             'nama' => 'Lala',
-    //             'kategori' => 'cantik',
-    //             'harga' => '1000000',
-    //             'ket' => 'Mahal'
-    //         ],
-    //         [
-    //             'nama' => 'Rio',
-    //             'kategori' => 'tampan',
-    //             'harga' => '400000',
-    //             'ket' => 'dijual'
-    //         ],
-    //         [
-    //             'nama' => 'Dimas',
-    //             'kategori' => 'sehat',
-    //             'harga' => '9000000',
-    //             'ket' => 'dijual'
-    //         ],
-    //     ]);
+        DB::table('makanans')->insert([
+            [
+                'kode_makanan'=> '011',
+                'nama' => 'Lala',
+                'kategori' => 'cantik',
+                'harga' => '1000000',
+                'ket' => 'Mahal'
+            ],
+            [
+                'kode_makanan'=> '022',
+                'nama' => 'Rio',
+                'kategori' => 'tampan',
+                'harga' => '400000',
+                'ket' => 'dijual'
+            ],
+            [
+                'kode_makanan'=> '033',
+                'nama' => 'Dimas',
+                'kategori' => 'sehat',
+                'harga' => '9000000',
+                'ket' => 'dijual'
+            ],
+        ]);
     //     //query untuk SELECT data 
     //     $result = DB::table('makanans')->where('id', 1)->get();
     //     dd($result);
@@ -100,7 +103,8 @@ class HomeController extends Controller
     //     'ket'=> '',
    // ]);
     
-        return 'masuk ke test';
+      //  return 'test';
+      dd("table");
     }
 
     public function test_eloquent()
