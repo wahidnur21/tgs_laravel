@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\MenuController;
+use App\Http\Controllers\KategoriController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,18 +18,10 @@ use App\Http\Controllers\HomeController;
 */
 
 Route::get('/', [HomeController ::class, 'index']);
-
-Route::get('/about', [HomeController ::class, 'about']);
-
-Route::get('/add', [HomeController ::class, 'tambah']);
-
-Route::post('/save', [HomeController ::class, 'simpan']);
-
-Route::get('/makanan', [HomeController ::class, 'view_makanan']);
+Route::get('/menu', [MenuController ::class, 'index']);
+Route::get('/kategori', [KategoriController ::class, 'index']);
 
 
-Route::get('/test_builder', [HomeController ::class, 'test_builder']);
-Route::get('/eloquent', [HomeController ::class, 'test_eloquent']);
 
 
 
