@@ -1,3 +1,3 @@
 <footer>
-  <p> © Copyrighr IK-2 | 2024  </p>
+  <p> &copy; Copyrighr IK-2 | 2024  </p>
 </footer> 
