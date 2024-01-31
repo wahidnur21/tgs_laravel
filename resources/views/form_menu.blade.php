@@ -14,12 +14,22 @@
                 @endisset
                     <div class="mb-3">
                         <label for="kode" class="form-label">Kode</label>
-                        <input type="text" class="form-control" id="kode" value={{ @$data->kode_kategori }}>
+                        <input type="text" class="form-control" id="kode" value={{ @$data->kode_menu }}>
                     </div>
 
                     <div class="mb-3">
                         <label for="nama" class="form-label">Nama</label>
                         <input type="text" class="form-control" id="kode" value={{ @$data->nama }}>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="kategori" class="form-label">kategori</label>
+                        <input type="text" class="form-control" id="kode" value={{ @$data->kategori }}>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="harga" class="form-label">Harga</label>
+                        <input type="number" class="form-control" id="kode" value={{ @$data->harga }}>
                     </div>
 
                     <div class="mb-3">

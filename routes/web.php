@@ -19,13 +19,21 @@ use App\Http\Controllers\KategoriController;
 
 Route::get('/', [HomeController ::class, 'index']);
 
-Route::get('/menu', [MenuController ::class, 'index']);
+
 
 Route::get('/kategori', [KategoriController ::class, 'index']);
+
 Route::get('/kategori/add', [KategoriController ::class, 'add']);
 Route::get('/kategori/{id}/edit', [KategoriController ::class, 'edit']);
 Route::get('/kategori/{id}/delete', [KategoriController ::class, 'delete']);
-Route::get('/kategori/save', [KategoriController ::class, 'save']);
+Route::post('/kategori/save', [KategoriController ::class, 'save']);
+
+Route::get('/menu', [MenuController ::class, 'index_mnu']);
+
+Route::get('/menu/add', [MenuController ::class, 'add_mnu']);
+Route::get('/menu/{id}/edit', [MenuController ::class, 'edit_mnu']);
+Route::get('/menu/{id}/delete', [MenuController ::class, 'delete_mnu']);
+Route::post('/menu/save', [MenuController ::class, 'save_mnu']);
 
 
 
