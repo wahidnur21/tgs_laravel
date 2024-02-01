@@ -32,7 +32,7 @@ class MenuController extends Controller
         ]);
     }
     // save 
-    public function save(Request $req)
+    public function save_mnu(Request $req)
     {
         // dd($req)
         $mnu_kode = @$req->mnu_kode;
@@ -76,7 +76,7 @@ class MenuController extends Controller
         return redirect('/menu');
 
     }
-    public function delete($id)
+    public function delete_mnu($id)
     {
         // dd($id);
         // query builder

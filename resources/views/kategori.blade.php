@@ -1,6 +1,6 @@
 @extends('template.index')
 
-@section('title', 'Home')
+@section('title', 'Kategori')
 
 @section('content')
 
@@ -12,15 +12,16 @@
             </a>
         </div>
     </div>
-<div class="row">
+
+<div class="row mt-3">
     <div class="row-12">
-        <table class="table">
+        <table class="table table-bordered table-striped">
           <thead>
             <tr>
                 <th scope="col">ID</th>
                 <th scope="col">Nama</th>
                 <th scope="col">Keterangan</th>
-                <th style="max-width: 200px"></th>
+               
             </tr>
           </thead>
           <tbody>
@@ -29,7 +30,8 @@
                   <th scope="row">{{ $row->kode_kategori }}</th>
                   <td>{{ $row->nama }}</td>
                   <td>{{ $row->ket }}</td>
-                  <td>
+                  <td style="max-width: 50px">
+                  <div class="btn-group">
                       <a href="/kategori/{{ $row->kode_kategori }}/edit">
                           <button type="button" class="btn btn-primary">Edit</button
                       </a>
@@ -37,6 +39,7 @@
                       <a href="/kategori/{{ $row->kode_kategori }}/delete">
                           <button type="button" class="btn btn-danger">Hapus</button
                       </a>
+                      </div>
                   </td>
                </tr>
             @endforeach
