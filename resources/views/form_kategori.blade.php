@@ -4,9 +4,10 @@
 
 @section('content')
 
-<div class="container">
+<div class="container my-4">
     <div class="row">
         <div class="row-12">
+            
             <form action="/kategori/save" method="POST">
                 @csrf
                 @isset($data)
@@ -14,17 +15,17 @@
                 @endisset
                     <div class="mb-3">
                         <label for="kode" class="form-label">Kode</label>
-                        <input type="text" class="form-control" id="kode" value={{ @$data->kode_kategori }}>
+                        <input type="text" class="form-control" id="kode" name="kode" value={{ @$data->kode_kategori }}>
                     </div>
 
                     <div class="mb-3">
                         <label for="nama" class="form-label">Nama</label>
-                        <input type="text" class="form-control" id="kode" value={{ @$data->nama }}>
+                        <input type="text" class="form-control" id="kode" name="nama" value={{ @$data->nama }}>
                     </div>
 
                     <div class="mb-3">
                         <label for="ket" class="form-label">Keterangan</label>
-                        <input type="text" class="form-control" id="kode" value={{ @$data->ket }}>
+                        <input type="text" class="form-control" id="kode" name="ket" value={{ @$data->ket }}>
                     </div>
                     <button type="submit" class="btn btn-primary">Simpan</button>
             </form>

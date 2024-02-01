@@ -6,4 +6,4 @@
 
 <h2>ini adalah halaman home</h2>
     
-@endsection
+@endsection 
