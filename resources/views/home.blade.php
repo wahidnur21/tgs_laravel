@@ -4,6 +4,8 @@
 
 @section('content')
 
-<h2>ini adalah halaman home</h2>
-    
+<h2><marquee>ini adalah halaman home</marquee></h2>
+<hr>
+
+  <br><br><br><br><br><br><br><br> 
 @endsection 
